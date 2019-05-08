@@ -1,3 +1,8 @@
-const person = require('./person');
+// Posso utilizar as duas maneiras para trazer dados
+const Person = require('./person');
 
-console.log(person);
+// import Person from './person';
+
+const Jackson = new Person('Jackson Silva', 19);
+
+Jackson.greeting()

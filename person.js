@@ -1,6 +1,23 @@
-const person = {
-    name: 'Jackson',
-    age: 19
+// Module Wrapper function é o mesmo de eu usar module.exports
+
+// Module Wrapper function
+// (function (exports,require,module, __filename, __dirname){
+
+//     )}
+
+
+// console.log(__dirname, __filename);
+
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    greeting() {
+        console.log(`My name is ${this.name} and I am ${this.age}`);
+    }
+
 }
 
-module.exports = person;
+module.exports = Person
