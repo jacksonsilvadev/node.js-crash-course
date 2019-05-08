@@ -1,0 +1,25 @@
+{
+  "name": "node.js_crash_course",
+  "version": "1.0.0",
+  "description": "Node crash course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JackFront/node.js-crash-course.git"
+  },
+  "author": "Jackson Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JackFront/node.js-crash-course/issues"
+  },
+  "homepage": "https://github.com/JackFront/node.js-crash-course#readme",
+  "dependencies": {
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.0"
+  }
+}
