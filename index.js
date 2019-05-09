@@ -3,6 +3,8 @@ const path = require('path');
 const fs = require('fs');
 
 const server = http.createServer((req, res) => {
+
+    console.log(process.env.PORT)
     // if (req.url === '/' || req.url === '/home') {
     //     // Buscando o directorio e atribuindo a pagina HTML para resposta ao response
     //     fs.readFile(path.join(__dirname, 'public', 'home.html'), (err, page) => {
@@ -113,4 +115,4 @@ const server = http.createServer((req, res) => {
 // Process é um metódo do Node aonde faz com que consigamos pegar o estado atual global da minha aplicação (Node.js);
 // process.env.PORT pega a porta do web server, caso ela não exista será utilizado o número informado
 
-server.listen(process.env.PORT || 3000, () => console.log(`Server running on port ${PORT}`));
+server.listen(process.env.PORT || 3000, () => console.log(`Server running on port`));
