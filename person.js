@@ -20,4 +20,8 @@ class Person {
 
 }
 
-module.exports = Person
+// import Person from './person';
+
+const Jackson = new Person('Jackson Silva', 19);
+
+Jackson.greeting()
