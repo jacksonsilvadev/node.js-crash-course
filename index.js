@@ -23,7 +23,26 @@ const server = http.createServer((req, res) => {
         });
     }
 
+    if (req.url === '/api/users') {
+        const users = [{
+                name: 'Bob Smith',
+                age: 40
+            },
+            {
+                name: 'Jackson Silva',
+                age: 19
+            },
+            {
+                name: 'Lucas Andrade',
+                age: 23
+            },
+        ];
 
+        res.writeHead(200, {
+            'Content-type': 'application/json'
+        });
+        res.end(JSON.stringify(users));
+    }
 
 });
 
