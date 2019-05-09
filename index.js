@@ -3,15 +3,28 @@ const path = require('path');
 const fs = require('fs');
 
 const server = http.createServer((req, res) => {
-    if (req.url === '/')
-        res.writeHead(200, {
-            'Content-type': 'text/html'
+    if (req.url === '/') {
+
+        fs.readFile(path.join(__dirname, 'public', 'home.html'), (err, page) => {
+            if (err) throw err;
+            res.writeHead(200, {
+                'Content-type': 'text/html'
+            });
+            res.end(page);
         });
-    res.end('<h1>Home</h1>');
-    if (req.url === '/about')
-        res.end('<h1>About</h1>')
-    if (req.url === '/node')
-        res.end('<h1>I love Node.js</h1>');
+    };
+    if (req.url === '/about') {
+        fs.readFile(path.join(__dirname, 'public', 'about.html'), (err, page) => {
+            if (err) throw err;
+            res.writeHead(200, {
+                'Content-type': 'text/html'
+            });
+            res.end(page);
+        });
+    }
+
+
+
 });
 
 // Process é um metódo do Node aonde faz com que consigamos pegar o estado atual global da minha aplicação (Node.js);
